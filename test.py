@@ -20,16 +20,26 @@ def coords(shape, dtype="int"):
 	# return the list of (x, y)-coordinates
 	return coords
 
-vid = cv2.VideoCapture(0)
+vid = cv2.VideoCapture('vid.mp4')
 
 while True:
 	ret, image = vid.read()
+	# image = cv2.imread('example_03.jpg')
 	image = imutils.resize(image, width=600)
 	gray = cv2.cvtColor(image, cv2.COLOR_BGR2GRAY)
 	rects = detector(gray, 1)
+	
+	if rects:
+		print "============================="
+		cv2.imwrite("face.jpg", image)
+	else:
+		print "w"
+	
+	# gray = cv2.imread("face.jpg", 0)
 
 	for (i, rect) in enumerate(rects):
-		if i is 0:
+		
+		if i < 1:
 			shape = predictor(gray, rect)
 			shape = coords(shape)
 
@@ -96,7 +106,6 @@ while True:
 			if ((d1chin / dxmouth1) > 1.75 ) & ((deye / dmouth) < 1.85) :
     				cv2.putText(image, "Face #{Supun}", (100, 100),
 				cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
-
 		cv2.line(image, (5,10), (60,45), (0,255,0), 2)
 
 	cv2.imshow("Output", image)
