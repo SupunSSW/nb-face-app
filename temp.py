@@ -15,3 +15,4 @@ while True:
     cv.imshow('sss', img)
     if cv.waitKey(1) & 0xff == ord('q'):
         break
+    
