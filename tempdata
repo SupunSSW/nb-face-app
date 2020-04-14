@@ -1,0 +1,44 @@
+        # # set TWO START
+
+        # nn1 = a1 / a2
+        # nn3 = a2 / a3
+
+        # nn4 = a5 / a4
+        # nn5 = a4 / a3
+
+        # nn6 = a3 / a7
+
+        # nn7 = a31 / a71
+        # nn8 = a41 / a81
+
+        # nn9 = a61 / a81
+        # nn10 = a51 / a71
+
+        # nn11 = a11 / a51
+        # nn12 = a21 / a61
+
+
+
+        # temp6 += nn6
+
+        # temp7 += ((nn1 + nn4) / 2.0)
+        # temp8 += ((nn3 + nn5) / 2.0)
+
+        # temp1 += ((nn7 + nn8) / 2.0)
+
+        
+        # temp5 += ((nn9 + nn10) / 2.0)
+
+        
+        # temp11 += ((nn11 + nn12) / 2.0)
+
+
+        # # return getRatio(temp1,5), getRatio(temp2,5,1), getRatio(temp3,5,1)
+        # # return getRatio(temp1,5), getRatio(temp3,5,1), getRatio(temp4,5,1), getRatio(temp5,5,1), getRatio(temp6,5,1)
+
+        # #######
+        # # return getRatio(temp7,5), getRatio(temp8,5,1), getRatio(temp6, 5, 1)
+        
+        # return getRatio(temp9,5,2), getRatio(temp10,5,2), getRatio(temp11,5,1)
+
+        # # set TWO END
